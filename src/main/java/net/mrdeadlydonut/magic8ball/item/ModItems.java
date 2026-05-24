@@ -21,6 +21,12 @@ public class ModItems {
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Magic8Ball.MOD_ID, name)))));
     }
 
+
+    public static void init() {
+        // This method does nothing, but calling it loads the class
+    }
+
+
     public static void registerModItems() {
         Magic8Ball.LOGGER.info("Registering Mod Items for " + Magic8Ball.MOD_ID);
 
