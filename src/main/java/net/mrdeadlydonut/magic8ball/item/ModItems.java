@@ -14,7 +14,7 @@ import net.mrdeadlydonut.magic8ball.Magic8Ball;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item Magic_8_Ball = registerItem("Magic 8 Ball", Item::new);
+    public static final Item MAGIC_8_BALL = registerItem("Magic_8_Ball", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(Magic8Ball.MOD_ID, name),
@@ -25,7 +25,7 @@ public class ModItems {
         Magic8Ball.LOGGER.info("Registering Mod Items for " + Magic8Ball.MOD_ID);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
-            output.accept(Magic_8_Ball);
+            output.accept(MAGIC_8_BALL);
         });
     }
 }
